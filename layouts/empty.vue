@@ -1,12 +1,6 @@
 <template>
   <v-app>
-   <AppBar />
-
-    <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
-    </v-main>
+    <Nuxt />
   </v-app>
 </template>
 

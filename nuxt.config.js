@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -11,11 +9,17 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Almarai:wght@400;800&display=swapp',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -33,7 +37,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -47,16 +51,15 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
       themes: {
-        dark: {
+        light: {
           primary: '#3e4595',
-          accent: colors.grey.darken3,
+          accent: '#f8f8f8',
           secondary: '#4ab9b2',
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
+          // info: colors.teal.lighten1,
+          // warning: colors.amber.base,
+          // error: colors.deepOrange.accent4,
+          // success: colors.green.accent3,
         },
       },
     },
@@ -65,15 +68,13 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-
   i18n: {
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr' },
       { code: 'ar', iso: 'ar-EG', file: 'ar.js', dir: 'rtl' },
     ],
     strategy: 'no_prefix',
-
-    defaultLocale: 'ar',
+    defaultLocale: 'en',
     lazy: true,
     langDir: '~/locales/',
     vueI18n: {
