@@ -33,6 +33,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/i18n'
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -49,9 +50,9 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: '#3e4595',
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          secondary: '#4ab9b2',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
@@ -63,4 +64,20 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr' },
+      { code: 'ar', iso: 'ar-EG', file: 'ar.js', dir: 'rtl' },
+    ],
+    strategy: 'no_prefix',
+
+    defaultLocale: 'ar',
+    lazy: true,
+    langDir: '~/locales/',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+  },
 }
