@@ -56,5 +56,23 @@ export default {
         ChooseProvince: 'Choose the province',
         ChooseRegion: 'Choose Region',
         ChooseInsurance: 'Choose insurance',
+    },
+    Footer: {
+        QuickLinks: 'quick links',
+        TermsOfUse: 'Terms of use',
+        PrivacyPolicy: 'Privacy policy',
+        who_are_we: 'who are we',
+        callUs: 'call us',
+        lockYourselFaway: 'lock yourself away',
+        Specialization: 'Specialization',
+        Region: 'Region',
+        theHospital: 'the hospital',
+        MedicalCentersClinics: 'Medical centers and clinics',
+        medicalStaff: 'medical staff',
+        JoinDoctor: 'Join as a doctor',
+        JoinNurse: 'Join as a nurse',
+        JoinMedicalCenter: 'Join as a medical center',
+        JoinPharmacy: 'Join as a pharmacy',
+        Available: 'Available on',
     }
 }

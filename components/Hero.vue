@@ -8,7 +8,9 @@
     >
       <v-container class="fill-height hero-container">
         <v-row align="center" class="fill-height">
-          <h1 class="doctor-name white--text">Dr. Lilas Al Shaarani</h1>
+          <h1 class="doctor-name white--text">
+            {{$t('DoctorPage.DoctorName') }}
+          </h1>
         </v-row>
       </v-container>
     </header>

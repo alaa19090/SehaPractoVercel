@@ -1,6 +1,6 @@
 export default {
     DoctorPage: {
-        DoctorName: 'دليلاس الشعراني',
+        DoctorName: 'د/ليلاس الشعراني',
         DoctorDescription: 'استشاري زراعة الاسنان والتركيبات وتقويم الاسنان بجامعة هارفارد',
         rating: 'تقييم',
         AboutDoctor: 'عن الطبيب',
@@ -55,5 +55,23 @@ export default {
         ChooseProvince: 'اختر المحافظة ',
         ChooseRegion: 'اختر المنطقة ',
         ChooseInsurance: 'اختر التأمين',
+    },
+    Footer: {
+        QuickLinks: 'لينكات سريعة ',
+        TermsOfUse: 'شروط الاستخدام ',
+        PrivacyPolicy: 'سياسة الخصوصية',
+        who_are_we: 'من نحن ',
+        callUs: 'اتصل بنا ',
+        lockYourselFaway: 'احجر عن طيق  ',
+        Specialization: 'التخصص ',
+        Region: 'المنطقة',
+        theHospital: 'المستشفى ',
+        MedicalCentersClinics: 'المراكز الطبية والعيادات',
+        medicalStaff: 'الكادر الطبي',
+        JoinDoctor: 'انضم كطبيب',
+        JoinNurse: 'انضم كممرض',
+        JoinMedicalCenter: 'انضم كمركز طبي',
+        JoinPharmacy: 'انضم كصيدلية',
+        Available: 'متوفر على ',
     }
 }

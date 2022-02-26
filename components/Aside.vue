@@ -100,7 +100,7 @@
         {{ `${index + 1}.00 pm` }}
       </v-chip>
 
-      <v-btn color="primary" class="mt-3 rounded-lg" x-large block>{{$t('Aside.BookDoctor')}}</v-btn>
+      <v-btn color="primary" class="my-2 rounded-lg" x-large block>{{$t('Aside.BookDoctor')}}</v-btn>
     </v-card>
   </div>
 </template>
