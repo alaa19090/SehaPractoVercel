@@ -31,6 +31,15 @@ export default {
         Instructions3: 'Admission to the doctor on a first-come-first-served basis',
         Instructions4: 'Giving complete patient data and keeping the place clean',
     },
+    Aside: {
+        AppointmentBooking: 'Appointment Booking',
+        DetectionType: 'Detection type',
+        OnlineDetection: 'Online detection',
+        homeDetection: 'home detection',
+        Examination: 'Examination in the clinic',
+        DetectionDate: 'Detection date',
+        BookDoctor: 'Book a doctor',
+    },
     Nav: {
         Login: 'Login',
         en: 'English',

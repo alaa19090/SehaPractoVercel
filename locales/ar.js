@@ -31,6 +31,15 @@ export default {
         Instructions3: 'الدخول للطبيب باسبقية الحضور',
         Instructions4: 'إعطاء بيانات المريض كاملة و الحفاظ على المكان نظيف',
     },
+    Aside: {
+        AppointmentBooking: 'حجز موعد',
+        DetectionType: 'نوع الكشف',
+        OnlineDetection: 'كشف اونلاين',
+        homeDetection: 'كشف بالمنزل',
+        Examination: 'كشف بالعيادة',
+        DetectionDate: 'ميعاد الكشف',
+        BookDoctor: 'حجز طبيب',
+    },
     Nav: {
         Login: 'تسجيل الدخول',
         en: 'English',

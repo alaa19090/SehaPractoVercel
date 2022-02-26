@@ -6,7 +6,7 @@
       color="white"
       class="nav-bar"
       max-height="64"
-      elevation="0"
+      elevation="2"
     >
       <div class="d-flex align-center">
         <nuxt-link to="/">
@@ -183,12 +183,16 @@ html[lang='ar'] {
       margin-right: 0 !important;
       margin-left: 16px;
     }
+    .pr-5.content-section {
+      padding-right: 0 !important;
+      padding-left: 20px !important;
+    }
   }
 }
 .nav-bar {
   .v-toolbar__content {
     width: 100%;
-    padding: 0px;
+    padding: 12px;
     margin-right: auto;
     margin-left: auto;
   }

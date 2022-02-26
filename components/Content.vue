@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="pr-5 content-section">
     <!-- first card  -->
     <v-card class="d-flex rounded-lg first-card" max-width="100%">
       <v-img

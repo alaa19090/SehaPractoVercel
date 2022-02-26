@@ -3,7 +3,6 @@
     <Hero />
     <v-container>
       <v-row>
-
         <!-- content column -->
         <v-col cols="12" md="8">
           <Content />
@@ -11,9 +10,10 @@
 
         <!-- sidbar column -->
         <v-col cols="12" md="4">
-          <!-- <Aside /> -->
+          <aside>
+            <Aside />
+          </aside>
         </v-col>
-
       </v-row>
     </v-container>
   </div>
