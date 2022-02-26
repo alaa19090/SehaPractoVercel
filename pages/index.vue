@@ -2,6 +2,7 @@
   <div>
     <Hero />
     <v-container>
+        <Booking />
       <v-row>
         <!-- content column -->
         <v-col cols="12" md="8">

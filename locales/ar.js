@@ -49,4 +49,11 @@ export default {
         MedicalStaff: 'الكادر الطبي',
         ContactUs: 'اتصل بنا',
     },
+    Booking: {
+        Search: 'بحث',
+        ChooseSpecialty: 'اختر الاختصاص ',
+        ChooseProvince: 'اختر المحافظة ',
+        ChooseRegion: 'اختر المنطقة ',
+        ChooseInsurance: 'اختر التأمين',
+    }
 }

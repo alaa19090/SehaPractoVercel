@@ -94,221 +94,230 @@
     </v-btn-toggle>
 
     <!-- About Doctor section -->
-    <div class="about-doctor" v-if="!toggle_exclusive">
-      <!-- 1 InfoAboutDoctor-->
-      <v-card class="rounded-lg py-8 px-6 mb-10" max-width="100%">
-        <v-card-title class="pa-0">
-          <h2 class="font-weight-bold text-h5 accent--text mb-3">
-            <v-icon color="primary" size="30">mdi-information-outline</v-icon>
-            <span class="mx-1">{{ $t('DoctorPage.InfoAboutDoctor') }}</span>
-          </h2>
-        </v-card-title>
+    <v-scroll-x-transition hide-on-leave>
+      <div class="about-doctor" v-if="!toggle_exclusive">
+        <!-- 1 InfoAboutDoctor-->
+        <v-card class="rounded-lg py-8 px-6 mb-10" max-width="100%">
+          <v-card-title class="pa-0">
+            <h2 class="font-weight-bold text-h5 accent--text mb-3">
+              <v-icon color="primary" size="30">mdi-information-outline</v-icon>
+              <span class="mx-1">{{ $t('DoctorPage.InfoAboutDoctor') }}</span>
+            </h2>
+          </v-card-title>
 
-        <v-card-text>
-          <p class="grey--text subtitle-2 mb-0">
-            {{ $t('DoctorPage.TestText') }}
-          </p>
-        </v-card-text>
-      </v-card>
+          <v-card-text>
+            <p class="grey--text subtitle-2 mb-0">
+              {{ $t('DoctorPage.TestText') }}
+            </p>
+          </v-card-text>
+        </v-card>
 
-      <!-- 2 workplace -->
-      <v-card class="rounded-lg py-8 px-6 mb-10" max-width="100%">
-        <v-card-title class="pa-0">
-          <h2 class="font-weight-bold text-h5 accent--text mb-4">
-            <v-icon class="mb-2" color="primary" size="30"
-              >mdi-medical-bag</v-icon
+        <!-- 2 workplace -->
+        <v-card class="rounded-lg py-8 px-6 mb-10" max-width="100%">
+          <v-card-title class="pa-0">
+            <h2 class="font-weight-bold text-h5 accent--text mb-4">
+              <v-icon class="mb-2" color="primary" size="30"
+                >mdi-medical-bag</v-icon
+              >
+              <span class="mx-1">{{ $t('DoctorPage.Workplace') }}</span>
+            </h2>
+          </v-card-title>
+
+          <v-card-text>
+            <v-row>
+              <v-col cols="12" md="6" class="pa-0">
+                <p class="mb-2">
+                  <span class="accent--text subtitle-1 font-weight-bold mx-2">
+                    {{ $t('DoctorPage.locationTilte1') }}
+                  </span>
+                  <br />
+                  <v-icon size="18" color="gary" class="mx-1"
+                    >mdi-map-marker-outline</v-icon
+                  >
+                  <span class="caption gary--text">
+                    {{ $t('DoctorPage.location') }}
+                  </span>
+                  <br />
+                  <v-icon size="18" color="gary" class="mx-1"
+                    >mdi-phone-outline</v-icon
+                  >
+                  <span class="caption gary--text"> 05645878745 </span>
+                </p>
+              </v-col>
+              <v-col cols="12" md="6" class="pa-0">
+                <p class="mb-2">
+                  <span class="accent--text subtitle-1 font-weight-bold mx-2">
+                    {{ $t('DoctorPage.locationTilte2') }}
+                  </span>
+                  <br />
+                  <v-icon size="18" color="gary" class="mx-1"
+                    >mdi-map-marker-outline</v-icon
+                  >
+                  <span class="caption gary--text">
+                    {{ $t('DoctorPage.location') }}
+                  </span>
+                </p>
+              </v-col>
+              <v-col cols="12" md="6" class="pa-0">
+                <p class="mb-2">
+                  <span class="accent--text subtitle-1 font-weight-bold mx-2">
+                    {{ $t('DoctorPage.locationTilte3') }}
+                  </span>
+                  <br />
+                  <v-icon size="18" color="gary" class="mx-1"
+                    >mdi-map-marker-outline</v-icon
+                  >
+                  <span class="caption gary--text">
+                    {{ $t('DoctorPage.location') }}
+                  </span>
+                </p>
+              </v-col>
+              <v-col cols="12" md="6" class="pa-0">
+                <p class="mb-2">
+                  <span class="accent--text subtitle-1 font-weight-bold mx-2">
+                    {{ $t('DoctorPage.locationTilte4') }}
+                  </span>
+                  <br />
+                  <v-icon size="18" color="gary" class="mx-1"
+                    >mdi-map-marker-outline</v-icon
+                  >
+                  <span class="caption gary--text">
+                    {{ $t('DoctorPage.location') }}
+                  </span>
+                  <br />
+                  <v-icon size="18" color="gary" class="mx-1"
+                    >mdi-phone-outline</v-icon
+                  >
+                  <span class="caption gary--text"> 05645878745 </span>
+                </p>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+
+        <!-- 3 medical services -->
+        <v-card class="rounded-lg pt-8 pb-4 px-6 mb-10" max-width="100%">
+          <v-card-title class="pa-0">
+            <h2 class="font-weight-bold text-h5 accent--text mb-3">
+              <v-icon color="primary" size="30">mdi-stethoscope</v-icon>
+              <span class="mx-1">{{ $t('DoctorPage.MedicalServices') }}</span>
+            </h2>
+          </v-card-title>
+
+          <v-card-text>
+            <v-chip
+              v-for="(link, index) in 6"
+              :key="index"
+              label
+              link
+              class="mr-3 mb-3 font-weight-bold subtitle-1 accent--text pa-6"
+              color="#f1f1f1"
+              to="#"
             >
-            <span class="mx-1">{{ $t('DoctorPage.Workplace') }}</span>
-          </h2>
-        </v-card-title>
+              {{ $t(`DoctorPage.MedicalServices${index + 1}`) }}
+            </v-chip>
+          </v-card-text>
+        </v-card>
 
-        <v-card-text>
-          <v-row>
-            <v-col cols="12" md="6" class="pa-0">
-              <p class="mb-2">
-                <span class="accent--text subtitle-1 font-weight-bold mx-2">
-                  {{ $t('DoctorPage.locationTilte1') }}
-                </span>
-                <br />
-                <v-icon size="18" color="gary" class="mx-1"
-                  >mdi-map-marker-outline</v-icon
-                >
-                <span class="caption gary--text">
-                  {{ $t('DoctorPage.location') }}
-                </span>
-                <br />
-                <v-icon size="18" color="gary" class="mx-1"
-                  >mdi-phone-outline</v-icon
-                >
-                <span class="caption gary--text"> 05645878745 </span>
-              </p>
-            </v-col>
-            <v-col cols="12" md="6" class="pa-0">
-              <p class="mb-2">
-                <span class="accent--text subtitle-1 font-weight-bold mx-2">
-                  {{ $t('DoctorPage.locationTilte2') }}
-                </span>
-                <br />
-                <v-icon size="18" color="gary" class="mx-1"
-                  >mdi-map-marker-outline</v-icon
-                >
-                <span class="caption gary--text">
-                  {{ $t('DoctorPage.location') }}
-                </span>
-              </p>
-            </v-col>
-            <v-col cols="12" md="6" class="pa-0">
-              <p class="mb-2">
-                <span class="accent--text subtitle-1 font-weight-bold mx-2">
-                  {{ $t('DoctorPage.locationTilte3') }}
-                </span>
-                <br />
-                <v-icon size="18" color="gary" class="mx-1"
-                  >mdi-map-marker-outline</v-icon
-                >
-                <span class="caption gary--text">
-                  {{ $t('DoctorPage.location') }}
-                </span>
-              </p>
-            </v-col>
-            <v-col cols="12" md="6" class="pa-0">
-              <p class="mb-2">
-                <span class="accent--text subtitle-1 font-weight-bold mx-2">
-                  {{ $t('DoctorPage.locationTilte4') }}
-                </span>
-                <br />
-                <v-icon size="18" color="gary" class="mx-1"
-                  >mdi-map-marker-outline</v-icon
-                >
-                <span class="caption gary--text">
-                  {{ $t('DoctorPage.location') }}
-                </span>
-                <br />
-                <v-icon size="18" color="gary" class="mx-1"
-                  >mdi-phone-outline</v-icon
-                >
-                <span class="caption gary--text"> 05645878745 </span>
-              </p>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
+        <!-- 4 certificate -->
+        <v-card class="rounded-lg pt-8 pb-4 px-6 mb-10" max-width="100%">
+          <v-card-title class="pa-0">
+            <h2 class="font-weight-bold text-h5 accent--text mb-3">
+              <v-icon color="primary" size="30">mdi-certificate</v-icon>
+              <span class="mx-1">{{ $t('DoctorPage.MedicalServices') }}</span>
+            </h2>
+          </v-card-title>
 
-      <!-- 3 medical services -->
-      <v-card class="rounded-lg pt-8 pb-4 px-6 mb-10" max-width="100%">
-        <v-card-title class="pa-0">
-          <h2 class="font-weight-bold text-h5 accent--text mb-3">
-            <v-icon color="primary" size="30">mdi-stethoscope</v-icon>
-            <span class="mx-1">{{ $t('DoctorPage.MedicalServices') }}</span>
-          </h2>
-        </v-card-title>
+          <v-card-text class="d-flex flex-wrap">
+            <v-img
+              :src="`/certificate/${index + 1}.png`"
+              class="rounded img-border mr-3 mb-3"
+              max-width="150px"
+              height="100px"
+              v-for="(link, index) in 6"
+              :key="index"
+            ></v-img>
+          </v-card-text>
+        </v-card>
 
-        <v-card-text>
-          <v-chip
-            v-for="(link, index) in 6"
-            :key="index"
-            label
-            link
-            class="mr-3 mb-3 font-weight-bold subtitle-1 accent--text pa-6"
-            color="#f1f1f1"
-            to="#"
-          >
-            {{ $t(`DoctorPage.MedicalServices${index + 1}`) }}
-          </v-chip>
-        </v-card-text>
-      </v-card>
+        <!-- 4 Instructions for patients -->
+        <v-card class="rounded-lg pt-8 pb-4 px-6 mb-10" max-width="100%">
+          <v-card-title class="pa-0">
+            <h2 class="font-weight-bold text-h5 accent--text mb-3">
+              <v-icon color="primary" size="30"
+                >mdi-comment-text-outline</v-icon
+              >
+              <span class="mx-1">{{
+                $t('DoctorPage.InstructionsForPatients')
+              }}</span>
+            </h2>
+          </v-card-title>
 
-      <!-- 4 certificate -->
-      <v-card class="rounded-lg pt-8 pb-4 px-6 mb-10" max-width="100%">
-        <v-card-title class="pa-0">
-          <h2 class="font-weight-bold text-h5 accent--text mb-3">
-            <v-icon color="primary" size="30">mdi-certificate</v-icon>
-            <span class="mx-1">{{ $t('DoctorPage.MedicalServices') }}</span>
-          </h2>
-        </v-card-title>
-
-        <v-card-text class="d-flex flex-wrap">
-          <v-img
-            :src="`/certificate/${index + 1}.png`"
-            class="rounded img-border mr-3 mb-3"
-            max-width="150px"
-            height="100px"
-            v-for="(link, index) in 6"
-            :key="index"
-          ></v-img>
-        </v-card-text>
-      </v-card>
-
-      <!-- 4 Instructions for patients -->
-      <v-card class="rounded-lg pt-8 pb-4 px-6 mb-10" max-width="100%">
-        <v-card-title class="pa-0">
-          <h2 class="font-weight-bold text-h5 accent--text mb-3">
-            <v-icon color="primary" size="30">mdi-comment-text-outline</v-icon>
-            <span class="mx-1">{{
-              $t('DoctorPage.InstructionsForPatients')
-            }}</span>
-          </h2>
-        </v-card-title>
-
-        <v-card-text class="d-flex flex-wrap instructions-wrap">
-          <span class="accent--text subtitle-1 font-weight-bold mb-2">
-            {{ $t('DoctorPage.Instructions1') }}
-          </span>
-          <span class="accent--text subtitle-1 font-weight-bold mb-2">
-            {{ $t('DoctorPage.Instructions2') }}
-          </span>
-          <span class="accent--text subtitle-1 font-weight-bold mb-2">
-            {{ $t('DoctorPage.Instructions3') }}
-          </span>
-          <span class="accent--text subtitle-1 font-weight-bold mb-2">
-            {{ $t('DoctorPage.Instructions4') }}
-          </span>
-        </v-card-text>
-      </v-card>
-    </div>
+          <v-card-text class="d-flex flex-wrap instructions-wrap">
+            <span class="accent--text subtitle-1 font-weight-bold mb-2">
+              {{ $t('DoctorPage.Instructions1') }}
+            </span>
+            <span class="accent--text subtitle-1 font-weight-bold mb-2">
+              {{ $t('DoctorPage.Instructions2') }}
+            </span>
+            <span class="accent--text subtitle-1 font-weight-bold mb-2">
+              {{ $t('DoctorPage.Instructions3') }}
+            </span>
+            <span class="accent--text subtitle-1 font-weight-bold mb-2">
+              {{ $t('DoctorPage.Instructions4') }}
+            </span>
+          </v-card-text>
+        </v-card>
+      </div>
+    </v-scroll-x-transition>
 
     <!-- Rating section -->
-    <div class="rating-doctor" v-else>
-      <v-card class="rounded-lg py-8 px-6 mb-10" max-width="100%">
-        <v-card-title class="pa-0">
-          <h2 class="font-weight-bold text-h5 accent--text mb-3">
-            <v-icon color="primary" size="30">mdi-comment-multiple-outline</v-icon>
-            <span class="mx-1">{{ $t('DoctorPage.rating') }}</span>
-          </h2>
-        </v-card-title>
-        <v-list three-line>
-          <template v-for="(item, index) in items">
-            <v-subheader
-              v-if="item.header"
-              :key="item.header"
-              v-text="item.header"
-            ></v-subheader>
 
-            <v-divider
-              v-else-if="item.divider"
-              :key="index"
-              :inset="item.inset"
-            ></v-divider>
+    <v-scroll-x-transition hide-on-leave>
+      <div class="rating-doctor" v-if="toggle_exclusive">
+        <v-card class="rounded-lg py-8 px-6 mb-10" max-width="100%">
+          <v-card-title class="pa-0">
+            <h2 class="font-weight-bold text-h5 accent--text mb-3">
+              <v-icon color="primary" size="30"
+                >mdi-comment-multiple-outline</v-icon
+              >
+              <span class="mx-1">{{ $t('DoctorPage.rating') }}</span>
+            </h2>
+          </v-card-title>
+          <v-list three-line>
+            <template v-for="(item, index) in items">
+              <v-subheader
+                v-if="item.header"
+                :key="item.header"
+                v-text="item.header"
+              ></v-subheader>
 
-            <v-list-item v-else :key="item.title">
-              <v-list-item-avatar>
-                <v-img :src="item.avatar"></v-img>
-              </v-list-item-avatar>
+              <v-divider
+                v-else-if="item.divider"
+                :key="index"
+                :inset="item.inset"
+              ></v-divider>
 
-              <v-list-item-content>
-                <v-list-item-title v-html="item.title"></v-list-item-title>
-                <v-list-item-subtitle
-                  v-html="item.subtitle"
-                ></v-list-item-subtitle>
-              </v-list-item-content>
-              <v-list-item-action>
-                <v-rating :value="5" color="amber" dense readonly></v-rating>
-              </v-list-item-action>
-            </v-list-item>
-          </template>
-        </v-list>
-      </v-card>
-    </div>
+              <v-list-item v-else :key="item.title">
+                <v-list-item-avatar>
+                  <v-img :src="item.avatar"></v-img>
+                </v-list-item-avatar>
+
+                <v-list-item-content>
+                  <v-list-item-title v-html="item.title"></v-list-item-title>
+                  <v-list-item-subtitle
+                    v-html="item.subtitle"
+                  ></v-list-item-subtitle>
+                </v-list-item-content>
+                <v-list-item-action>
+                  <v-rating :value="5" color="amber" dense readonly></v-rating>
+                </v-list-item-action>
+              </v-list-item>
+            </template>
+          </v-list>
+        </v-card>
+      </div>
+    </v-scroll-x-transition>
   </section>
 </template>
 <script>

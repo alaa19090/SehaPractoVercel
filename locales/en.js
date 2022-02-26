@@ -50,4 +50,11 @@ export default {
         ContactUs: 'Contact us',
 
     },
+    Booking: {
+        Search: 'Search',
+        ChooseSpecialty: 'Choose a specialty',
+        ChooseProvince: 'Choose the province',
+        ChooseRegion: 'Choose Region',
+        ChooseInsurance: 'Choose insurance',
+    }
 }
