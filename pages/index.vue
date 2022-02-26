@@ -1,9 +1,22 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-     
-    </v-col>
-  </v-row>
+  <div>
+    <Hero />
+    <v-container>
+      <v-row>
+
+        <!-- content column -->
+        <v-col col="12" md="8">
+          <Content />
+        </v-col>
+
+        <!-- sidbar column -->
+        <v-col col="12" md="4">
+          <!-- <Aside /> -->
+        </v-col>
+
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script>
