@@ -1,40 +1,63 @@
 <template>
   <nav>
-    <v-toolbar
-      app
-      flat
+    <v-app-bar
       fixed
+      flat
       color="white"
       class="nav-bar"
       max-height="64"
       elevation="0"
     >
-      <v-toolbar-items class="align-center">
+      <div class="d-flex align-center">
         <nuxt-link to="/">
-          <v-img src="/logo.jpg" max-width="35px" class="mr-4 logo"></v-img>
+          <v-img src="/logo.png" max-width="50px" class="mr-4 logo"></v-img>
         </nuxt-link>
 
         <nuxt-link
           to="#"
-          class="mx-8 subtitle-2 font-weight-bold black--text text-decoration-none"
+          class="
+            mx-8
+            subtitle-2
+            font-weight-bold
+            black--text
+            text-decoration-none
+          "
           >{{ $t('Nav.Home') }}</nuxt-link
         >
         <nuxt-link
           to="/"
-          class="mx-8 subtitle-2 font-weight-bold black--text text-decoration-none"
+          class="
+            mx-8
+            subtitle-2
+            font-weight-bold
+            black--text
+            text-decoration-none
+          "
           >{{ $t('Nav.AboutUs') }}</nuxt-link
         >
         <nuxt-link
           to="#"
-          class="mx-8 subtitle-2 font-weight-bold black--text text-decoration-none"
+          class="
+            mx-8
+            subtitle-2
+            font-weight-bold
+            black--text
+            text-decoration-none
+          "
           >{{ $t('Nav.MedicalStaff') }}</nuxt-link
         >
         <nuxt-link
           to="#"
-          class="mx-8 subtitle-2 font-weight-bold black--text text-decoration-none"
+          class="
+            mx-8
+            subtitle-2
+            font-weight-bold
+            black--text
+            text-decoration-none
+          "
           >{{ $t('Nav.ContactUs') }}</nuxt-link
         >
-      </v-toolbar-items>
+      </div>
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-badge left color="secondary" bordered dot overlap>
@@ -92,7 +115,7 @@
         class="caption rounded-lg px-8 py-5"
         >{{ $t('Nav.Login') }}</v-btn
       >
-    </v-toolbar>
+    </v-app-bar>
   </nav>
 </template>
 <script>
@@ -100,7 +123,7 @@ export default {
   name: 'DefaultLayout',
   data() {
     return {
-      lang: '',
+      lang: 'en',
       menu: false,
       language: this.$i18n.localeCodes || [],
     }
@@ -112,6 +135,11 @@ export default {
     const i18n_redirected = this.getCookie('i18n_redirected')
     if (i18n_redirected) {
       this.lang = i18n_redirected
+      if (this.lang == 'ar') {
+        this.$vuetify.rtl = true
+      } else {
+        this.$vuetify.rtl = false
+      }
     } else {
       this.lang = this.$i18n.defaultLocale
     }
@@ -127,7 +155,6 @@ export default {
     languageSwitch(val) {
       this.$i18n.setLocale(val)
       this.lang = val
-
       if (val == 'ar') {
         this.$vuetify.rtl = true
       } else {
@@ -150,6 +177,7 @@ html[lang='ar'] {
   .v-application {
     * {
       font-family: 'Almarai', sans-serif !important;
+      letter-spacing: 0 !important;
     } //all arabic text
     .mr-4.logo {
       margin-right: 0 !important;
@@ -160,7 +188,7 @@ html[lang='ar'] {
 .nav-bar {
   .v-toolbar__content {
     width: 100%;
-    padding: 12px;
+    padding: 0px;
     margin-right: auto;
     margin-left: auto;
   }

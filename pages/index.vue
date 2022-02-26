@@ -5,12 +5,12 @@
       <v-row>
 
         <!-- content column -->
-        <v-col col="12" md="8">
+        <v-col cols="12" md="8">
           <Content />
         </v-col>
 
         <!-- sidbar column -->
-        <v-col col="12" md="4">
+        <v-col cols="12" md="4">
           <!-- <Aside /> -->
         </v-col>
 

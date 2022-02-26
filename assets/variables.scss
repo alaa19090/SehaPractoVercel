@@ -2,3 +2,9 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+//for tablet and phone 
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}

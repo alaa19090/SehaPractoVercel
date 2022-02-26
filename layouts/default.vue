@@ -13,3 +13,8 @@ export default {
   name: 'DefaultLayout',
 }
 </script>
+<style >
+body {
+  margin-top: 64px;
+}
+</style>
