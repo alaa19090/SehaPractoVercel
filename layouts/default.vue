@@ -15,8 +15,12 @@ export default {
   name: 'DefaultLayout',
 }
 </script>
-<style >
+<style lang="scss" >
 body {
   margin-top: 64px;
+    @include tablet {
+      margin-top: 50px;
+    
+    }
 }
 </style>

@@ -6,7 +6,7 @@ $accent: #141334;
 $secondary: #4ab9b2; // $font-size-root: 20px;
 //for tablet and phone 
 @mixin tablet {
-    @media (max-width: 768px) {
+    @media (max-width: 960px) {
         @content;
     }
 }

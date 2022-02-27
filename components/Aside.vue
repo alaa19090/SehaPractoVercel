@@ -12,7 +12,7 @@
     </v-card>
 
     <v-card
-      class="rounded-lg pt-8 pb-4 px-6 mb-10"
+      class="rounded-lg py-md-8 px-md-6 py-4 px-3 mb-10"
       max-width="100%"
       style="margin-top: -5px"
     >

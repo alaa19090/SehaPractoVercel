@@ -2,7 +2,16 @@
   <v-card
     style="margin-top: -90px"
     width="100%"
-    class="d-flex justify-space-between py-9 px-6 primary rounded-xl mb-13"
+    class="
+      d-flex
+      justify-space-between
+      py-9
+      px-6
+      primary
+      rounded-xl
+      mb-13
+      filter-card
+    "
   >
     <v-select
       :items="items"
@@ -44,7 +53,7 @@
 
     <v-btn
       x-large
-      class="rounded-lg mx-2 white--text"
+      class="rounded-lg mx-2 white--text filter-btn"
       color="secondary"
       height="60"
       width="17%"
@@ -61,3 +70,22 @@ export default {
   }),
 }
 </script>
+<style lang="scss">
+.filter-card {
+  @include tablet {
+    flex-direction: column;
+  }
+  @include tablet {
+    .filter-btn {
+      width: 100% !important;
+      margin: auto !important;
+    }
+    .v-select {
+      width: 100% !important;
+      margin: auto !important;
+      margin-bottom: 12px !important;
+
+    }
+  }
+}
+</style>

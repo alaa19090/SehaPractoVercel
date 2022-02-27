@@ -97,7 +97,7 @@
     <v-scroll-x-transition hide-on-leave>
       <div class="about-doctor" v-if="!toggle_exclusive">
         <!-- 1 InfoAboutDoctor-->
-        <v-card class="rounded-lg py-8 px-6 mb-10" max-width="100%">
+        <v-card class="rounded-lg py-md-8 px-md-6 py-4 px-3 mb-10" max-width="100%">
           <v-card-title class="pa-0">
             <h2 class="font-weight-bold text-h5 accent--text mb-3">
               <v-icon color="primary" size="30">mdi-information-outline</v-icon>
@@ -113,7 +113,7 @@
         </v-card>
 
         <!-- 2 workplace -->
-        <v-card class="rounded-lg py-8 px-6 mb-10" max-width="100%">
+        <v-card class="rounded-lg py-md-8 px-md-6 py-4 px-3 mb-10" max-width="100%">
           <v-card-title class="pa-0">
             <h2 class="font-weight-bold text-h5 accent--text mb-4">
               <v-icon class="mb-2" color="primary" size="30"
@@ -127,7 +127,7 @@
             <v-row>
               <v-col cols="12" md="6" class="pa-0">
                 <p class="mb-2">
-                  <span class="accent--text subtitle-1 font-weight-bold mx-2">
+                  <span class="accent--text subtitle-1 font-weight-bold mx-2 mt-3 mt-md-1">
                     {{ $t('DoctorPage.locationTilte1') }}
                   </span>
                   <br />
@@ -146,7 +146,7 @@
               </v-col>
               <v-col cols="12" md="6" class="pa-0">
                 <p class="mb-2">
-                  <span class="accent--text subtitle-1 font-weight-bold mx-2">
+                  <span class="accent--text subtitle-1 font-weight-bold mx-2 mt-3 mt-md-1">
                     {{ $t('DoctorPage.locationTilte2') }}
                   </span>
                   <br />
@@ -160,7 +160,7 @@
               </v-col>
               <v-col cols="12" md="6" class="pa-0">
                 <p class="mb-2">
-                  <span class="accent--text subtitle-1 font-weight-bold mx-2">
+                  <span class="accent--text subtitle-1 font-weight-bold mx-2 mt-3 mt-md-1">
                     {{ $t('DoctorPage.locationTilte3') }}
                   </span>
                   <br />
@@ -174,7 +174,7 @@
               </v-col>
               <v-col cols="12" md="6" class="pa-0">
                 <p class="mb-2">
-                  <span class="accent--text subtitle-1 font-weight-bold mx-2">
+                  <span class="accent--text subtitle-1 font-weight-bold mx-2 mt-3 mt-md-1">
                     {{ $t('DoctorPage.locationTilte4') }}
                   </span>
                   <br />
@@ -196,7 +196,7 @@
         </v-card>
 
         <!-- 3 medical services -->
-        <v-card class="rounded-lg pt-8 pb-4 px-6 mb-10" max-width="100%">
+        <v-card class="rounded-lg pt-md-8 pb-md-4 px-md-6 py-4 px-3 mb-10" max-width="100%">
           <v-card-title class="pa-0">
             <h2 class="font-weight-bold text-h5 accent--text mb-3">
               <v-icon color="primary" size="30">mdi-stethoscope</v-icon>
@@ -210,7 +210,7 @@
               :key="index"
               label
               link
-              class="mr-3 mb-3 font-weight-bold subtitle-1 accent--text pa-6"
+              class="mr-md-3 mb-md-3 font-weight-bold subtitle-1 accent--text pa-md-6 ma-1"
               color="#f1f1f1"
               to="#"
             >
@@ -220,18 +220,18 @@
         </v-card>
 
         <!-- 4 certificate -->
-        <v-card class="rounded-lg pt-8 pb-4 px-6 mb-10" max-width="100%">
+        <v-card class="rounded-lg pt-md-8 pb-md-4 px-md-6 py-4 px-3 mb-10" max-width="100%">
           <v-card-title class="pa-0">
             <h2 class="font-weight-bold text-h5 accent--text mb-3">
               <v-icon color="primary" size="30">mdi-certificate</v-icon>
-              <span class="mx-1">{{ $t('DoctorPage.MedicalServices') }}</span>
+              <span class="mx-1">{{ $t('DoctorPage.Certificate') }}</span>
             </h2>
           </v-card-title>
 
-          <v-card-text class="d-flex flex-wrap">
+          <v-card-text class="d-flex flex-wrap pa-0">
             <v-img
               :src="`/certificate/${index + 1}.png`"
-              class="rounded img-border mr-3 mb-3"
+              class="rounded img-border mr-md-3 mb-md-3 ma-1"
               max-width="150px"
               height="100px"
               v-for="(link, index) in 6"
@@ -241,7 +241,7 @@
         </v-card>
 
         <!-- 4 Instructions for patients -->
-        <v-card class="rounded-lg pt-8 pb-4 px-6 mb-10" max-width="100%">
+        <v-card class="rounded-lg pt-md-8 pb-md-4 px-md-6 py-4 px-3 mb-10" max-width="100%">
           <v-card-title class="pa-0">
             <h2 class="font-weight-bold text-h5 accent--text mb-3">
               <v-icon color="primary" size="30"
@@ -275,7 +275,7 @@
 
     <v-scroll-x-transition hide-on-leave>
       <div class="rating-doctor" v-if="toggle_exclusive">
-        <v-card class="rounded-lg py-8 px-6 mb-10" max-width="100%">
+        <v-card class="rounded-lg py-md-8 px-md-6 py-4 px-3 mb-10" max-width="100%">
           <v-card-title class="pa-0">
             <h2 class="font-weight-bold text-h5 accent--text mb-3">
               <v-icon color="primary" size="30"
@@ -379,6 +379,18 @@ export default {
     width: 48%;
     @include tablet {
       width: 100%;
+    }
+  }
+}
+// mobile style
+@include tablet {
+  .pr-5.content-section{
+    padding: 0 !important;
+  }
+  .first-card {
+    flex-direction: column !important;
+    .v-image {
+      max-width: 100% !important;
     }
   }
 }
