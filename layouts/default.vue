@@ -5,8 +5,9 @@
     <v-main>
       <Nuxt />
     </v-main>
-    
+
     <Footer />
+    <Laoder />
   </v-app>
 </template>
 
@@ -18,9 +19,8 @@ export default {
 <style lang="scss" >
 body {
   margin-top: 64px;
-    @include tablet {
-      margin-top: 50px;
-    
-    }
+  @include tablet {
+    margin-top: 50px;
+  }
 }
 </style>
