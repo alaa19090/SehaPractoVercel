@@ -65,18 +65,19 @@
         <v-icon color="black">mdi-menu</v-icon>
       </v-btn>
 
-      <v-btn icon :small="!$vuetify.breakpoint.mdAndUp">
+      <v-btn icon small>
         <v-badge left color="secondary" bordered dot overlap>
           <v-icon color="black">mdi-cart-outline</v-icon>
         </v-badge>
       </v-btn>
 
-      <v-spacer></v-spacer>
+      <v-spacer v-if="!$vuetify.breakpoint.mdAndUp"></v-spacer>
 
-      <nuxt-link to="/">
+      <nuxt-link to="/" v-if="!$vuetify.breakpoint.mdAndUp">
         <v-img src="/logo.png" max-width="50px" class="mr-4 logo"></v-img>
         <!-- hide on pc -->
       </nuxt-link>
+
       <v-spacer v-if="!$vuetify.breakpoint.mdAndUp"></v-spacer>
       <!-- hide on pc -->
 
