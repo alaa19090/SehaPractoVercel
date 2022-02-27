@@ -13,7 +13,7 @@
             <nuxt-link to="/">
               <v-img src="/logo.png" max-width="130"></v-img>
             </nuxt-link>
-            <div class="justify-space-around d-flex px-md-3 mx-auto" style="width: 130px">
+            <div class="justify-space-around d-flex mx-md-0 mx-auto" style="width: 130px">
               <nuxt-link to="#">
                 <v-icon color="white">mdi-facebook</v-icon>
               </nuxt-link>
